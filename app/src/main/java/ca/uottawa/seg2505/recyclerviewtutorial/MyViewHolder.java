@@ -8,11 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Représente un élément visuel du RecyclerView.
- * Conserve la référence au TextView de chaque élément.
+ * Conserve les références au titre et à la description.
  */
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
     public final TextView itemText;
+    public final TextView itemDescription;
 
     /**
      * Initialise le ViewHolder à partir de la vue d'un élément.
@@ -21,6 +22,8 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
      */
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
+
         itemText = itemView.findViewById(R.id.itemText);
+        itemDescription = itemView.findViewById(R.id.itemDescription);
     }
 }

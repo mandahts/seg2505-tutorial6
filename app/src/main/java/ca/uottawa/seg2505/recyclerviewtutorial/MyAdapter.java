@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 /**
- * Adaptateur permettant d'afficher une liste de chaînes
- * de caractères dans un RecyclerView.
+ * Adaptateur permettant d'afficher une liste d'éléments
+ * avec un titre et une description dans un RecyclerView.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
@@ -45,7 +45,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     /**
-     * Associe les données à un élément du RecyclerView.
+     * Associe le titre et la description à un élément.
      *
      * @param holder ViewHolder à mettre à jour.
      * @param position Position de l'élément.
@@ -55,6 +55,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
             @NonNull MyViewHolder holder, int position) {
 
         holder.itemText.setText(items.get(position));
+
+        holder.itemDescription.setText(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        );
     }
 
     /**
